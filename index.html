@@ -5,6 +5,16 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>flowboost</title>
+    <script>
+  (function() {
+    var p = window.location.search.match(/[?&]p=([^&]+)/);
+    if (p) {
+      window.history.replaceState(null, null,
+        decodeURIComponent(p[1]) + window.location.search.replace(/[?&]p=[^&]+/, '')
+      );
+    }
+  })();
+</script>
     <script type="module" crossorigin src="/assets/index-ejKfIN7p.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-DSe_Qslr.css">
   </head>
