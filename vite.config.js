@@ -9,5 +9,9 @@ import react from "@vitejs/plugin-react";
 // ─────────────────────────────────────────────────────────────────────────────
 export default defineConfig({
   plugins: [react()],
-  base: "/waveport/", // ← Change this to your repo name
+  // The production site uses the root custom domain waveport.store.
+  base: "/",
+  server: {
+    allowedHosts: true,
+  },
 });

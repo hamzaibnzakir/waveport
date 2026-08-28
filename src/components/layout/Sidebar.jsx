@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   LayoutDashboard, Rocket, List, Wallet,
   Settings, ChevronRight, LogOut, Menu, X,
-  Zap, Clock, Globe, BarChart3,
+
 } from "lucide-react";
 import { useAuth } from "../../context/AuthContext";
 import toast from "react-hot-toast";
@@ -18,12 +18,6 @@ const NAV_ITEMS = [
   { to: "/settings", icon: Settings, label: "Settings" },
 ];
 
-const COMING_SOON = [
-  { icon: BarChart3, label: "Analytics Pro" },
-  { icon: Globe, label: "SEO Traffic" },
-  { icon: Zap, label: "API Access" },
-  { icon: Clock, label: "Scheduler" },
-];
 
 export default function Sidebar() {
   const { userProfile, logout } = useAuth();
@@ -84,15 +78,10 @@ export default function Sidebar() {
           </NavLink>
         ))}
 
-        {/* Coming soon section */}
-        <p className="nav-section-label" style={{ marginTop: 20 }}>More Services</p>
-        {COMING_SOON.map(({ icon: Icon, label }) => (
-          <div key={label} className="nav-item nav-item--coming">
-            <Icon size={18} />
-            <span>{label}</span>
-            <span className="coming-badge">Soon</span>
-          </div>
-        ))}
+        <div className="sidebar-note">
+          <span className="sidebar-note-dot" />
+          <div><strong>Traffic desk</strong><small>Launch, fund, monitor.</small></div>
+        </div>
       </nav>
 
       {/* Logout */}

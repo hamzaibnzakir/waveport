@@ -114,20 +114,20 @@ export default function AuthPage() {
             <span className="logo-text logo-text--lg">FlowBoost</span>
           </div>
           <h1 className="auth-headline">
-            Growth<br />
-            Infrastructure<br />
-            <span className="auth-headline-accent">for the web.</span>
+            Launch<br />
+            traffic<br />
+            <span className="auth-headline-accent">with intent.</span>
           </h1>
           <p className="auth-sub">
-            Drive targeted traffic from any platform.<br />
-            Pay as you go. Launch in minutes.
+            Send real visitors to the pages that matter.<br />
+            Choose your source, pace, and reach.
           </p>
 
           <div className="auth-stats">
             {[
-              { value: "12M+", label: "Visits Delivered" },
-              { value: "98%", label: "Uptime" },
-              { value: "60+", label: "Countries" },
+              { value: "01", label: "Destination first" },
+              { value: "24h", label: "Burst delivery" },
+              { value: "04", label: "Clear steps" },
             ].map(({ value, label }) => (
               <div key={label} className="auth-stat-item">
                 <span className="auth-stat-value">{value}</span>
