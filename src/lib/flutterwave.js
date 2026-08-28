@@ -7,12 +7,11 @@
 //  3. Replace "YOUR_FLUTTERWAVE_PUBLIC_KEY" below
 //
 // Note: Never put your SECRET key in the frontend.
-//       Secret key stays on your VPS backend only.
+//       Secret key stays on your Railway backend only.
 // ─────────────────────────────────────────────────────────────────────────────
 
 export const FLUTTERWAVE_PUBLIC_KEY = "FLWPUBK-1692dc0dae67e2327401a155af86e68e-X";
 
-// Your VPS backend base URL
-// Change this to your actual VPS IP or domain when deployed
-// e.g. "https://api.yourdomain.com" or "http://YOUR_VPS_IP:3001"
-export const API_BASE_URL = "http://66.45.236.104:3001";
+// Backend base URL. Set VITE_API_BASE_URL when Railway provides the API domain.
+// Example: VITE_API_BASE_URL=https://flowboost-backend-production.up.railway.app
+export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "";
